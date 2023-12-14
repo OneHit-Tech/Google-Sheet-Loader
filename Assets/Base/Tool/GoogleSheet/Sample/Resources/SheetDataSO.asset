@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb89a03d0f0391c46b5478910cabcdc7, type: 3}
+  m_Name: SheetDataSO
+  m_EditorClassIdentifier: 
+  gameDataSO: {fileID: 11400000, guid: b7a32fd164cf9c34c91acf3ffa4e22b9, type: 2}
+  sheetUrls:
+  - originalUrl: https://docs.google.com/spreadsheets/d/1IIIjo5gRPSlIulEG8UKpblI-SoAqIkBTIZhx3srzBhw/edit#gid=0
+    deployUrl: https://script.googleusercontent.com/macros/echo?user_content_key=p5Ud7JQADnyd6WPuUqoDFedHciiGM7UEJ1ZU7hXOzRcPaYPNSKlA80-5g_A8J3thGTQmtHeA10-YHSSJOXbu-hwVyZqErVL6m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnB4ZSY5UMFThaltBwob-t2efv9Z11mZXGRLhmwYTWlYw9rY35sCir2a3ExyUqWwnIMYrmb6zKZhoUPn7LeOGbtGqSoYSfFQBmNz9Jw9Md8uu&lib=MRSUt4NTG0V3STyuKSFFDImlGxTIUvSrR
