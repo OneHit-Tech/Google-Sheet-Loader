@@ -26,7 +26,7 @@ namespace Base.Tool.Sheet.Sample
 
         public List<ItemData> itemDataSet = new();
         public List<BuffData> buffDataSet = new();
-
+        
         public void LoadDataFromSheet(SheetData sheetData)
         {
             Debug.Log("Load data into game".Color("yellow"));

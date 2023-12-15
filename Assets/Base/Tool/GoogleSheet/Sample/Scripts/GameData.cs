@@ -22,6 +22,8 @@ namespace Base.Tool.Sheet.Sample
             name = itemInSheet.Name;
             quantity = itemInSheet.Quantity;
             type = (EItemType)itemInSheet.Type;
+            
+            // TODO: do something else
         }
     }
 
@@ -39,6 +41,8 @@ namespace Base.Tool.Sheet.Sample
             name = buffInSheet.Name;
             value = buffInSheet.Value;
             quantity = buffInSheet.Quantity;
+            
+            // TODO: do something else
         }
     }
 }
