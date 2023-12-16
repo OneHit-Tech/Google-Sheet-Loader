@@ -1,6 +1,6 @@
 using System;
 
-namespace Base.Tool.Sheet.Sample
+namespace Base.Tool.Sheet.Example
 {
     public enum EItemType
     {
@@ -22,8 +22,6 @@ namespace Base.Tool.Sheet.Sample
             name = itemInSheet.Name;
             quantity = itemInSheet.Quantity;
             type = (EItemType)itemInSheet.Type;
-            
-            // TODO: do something else
         }
     }
 
@@ -34,15 +32,13 @@ namespace Base.Tool.Sheet.Sample
         public string name;
         public float value;
         public int quantity;
-        
+
         public BuffData(BuffInSheet buffInSheet)
         {
             id = buffInSheet.ID;
             name = buffInSheet.Name;
             value = buffInSheet.Value;
             quantity = buffInSheet.Quantity;
-            
-            // TODO: do something else
         }
     }
 }

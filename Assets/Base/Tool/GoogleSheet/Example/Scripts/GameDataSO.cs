@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Base.Tool.Sheet.Sample
+namespace Base.Tool.Sheet.Example
 {
     [CreateAssetMenu(fileName = "GameDataSO", menuName = "Sheet/GameDataSO")]
     public class GameDataSO : ScriptableObject

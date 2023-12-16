@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Base.Tool.Sheet.Sample
+namespace Base.Tool.Sheet.Example
 {
     public class BuffUI : MonoBehaviour
     {

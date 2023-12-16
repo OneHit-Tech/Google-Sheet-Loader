@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Base.Tool.Sheet.Sample
+namespace Base.Tool.Sheet.Example
 {
     public class ItemUI : MonoBehaviour
     {

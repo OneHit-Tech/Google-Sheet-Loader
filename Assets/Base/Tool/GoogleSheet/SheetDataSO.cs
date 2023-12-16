@@ -6,7 +6,6 @@ using UnityEngine.Networking;
 using Cysharp.Threading.Tasks;
 using Debug = UnityEngine.Debug;
 using System.Collections.Generic;
-using Base.Tool.Sheet.Sample;
 using Sirenix.OdinInspector;
 
 namespace Base.Tool.Sheet
@@ -14,31 +13,22 @@ namespace Base.Tool.Sheet
     [CreateAssetMenu(fileName = "SheetManagerSO", menuName = "Sheet/SheetManagerSO")]
     public class SheetDataSO : ScriptableObject
     {
-        [Space] public GameDataSO gameDataSO;
-        [Space] public List<SheetUrl> sheetUrls = new();
-
+        public List<SheetUrl> sheetUrls = new();
 
         [PropertySpace]
         [GUIColor(0f, 0.8f, 0.4f)]
         [Button(ButtonSizes.Large)]
-        private async void FetchData()
+        private async void FetchDataFromSheet()
         {
-            var sheetDataList = new List<SheetData>();
-
-            Debug.Log($"Fetching data ...".Color("orange"));
+            Debug.Log("Start fetching data ...".Color("orange"));
             foreach (var sheetUrl in sheetUrls)
             {
                 var sheetObjectJson = await GetDataAsync(sheetUrl.deployUrl);
                 var sheetData = JsonConvert.DeserializeObject<SheetData>(sheetObjectJson);
-                sheetDataList.Add(sheetData);
+                sheetUrl.onFetchedData.Invoke(sheetData);
             }
 
             Debug.Log("Fetch data complete!".Color("lime"));
-
-
-            // * EXAMPLE: load data to game
-            var dataGameInSheet = sheetDataList[0];
-            gameDataSO.LoadDataFromSheet(dataGameInSheet);
         }
 
 
@@ -52,7 +42,7 @@ namespace Base.Tool.Sheet
             await webRequest.SendWebRequest();
             stopwatch.Stop();
 
-            Debug.Log($"Finish in {stopwatch.Elapsed.TotalSeconds}s".Color("cyan")
+            Debug.Log($"End request after {stopwatch.Elapsed.TotalSeconds}s".Color("cyan")
                       + "\n" + webRequest.downloadHandler.text);
 
             return webRequest.downloadHandler.text;

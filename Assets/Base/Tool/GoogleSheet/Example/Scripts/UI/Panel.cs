@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
-namespace Base.Tool.Sheet.Sample
+namespace Base.Tool.Sheet.Example
 {
     public class Panel : MonoBehaviour
     {
