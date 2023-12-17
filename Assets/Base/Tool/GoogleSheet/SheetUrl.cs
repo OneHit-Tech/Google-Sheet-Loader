@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 using Sirenix.OdinInspector;
 
 namespace Base.Tool.Sheet
@@ -13,9 +12,6 @@ namespace Base.Tool.Sheet
 
         [InlineButton(nameof(OpenDeploySheet), "Open")]
         public string deployUrl;
-
-        [Space]
-        public UnityEvent<SheetData> onFetchedData;
 
         private void OpenOriginalSheet() => Application.OpenURL(originalUrl);
         private void OpenDeploySheet() => Application.OpenURL(deployUrl);

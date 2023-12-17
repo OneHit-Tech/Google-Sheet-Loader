@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace Base.Tool.Sheet.Example
 {
     [CreateAssetMenu(fileName = "GameDataSO", menuName = "Sheet/GameDataSO")]
-    public class GameDataSO : ScriptableObject
+    public class GameDataSO : ScriptableObject, IFetchDataInSheet
     {
         #region ===== Singleton =====
         private static GameDataSO _instance;
@@ -26,8 +26,8 @@ namespace Base.Tool.Sheet.Example
 
         public List<ItemData> itemDataSet = new();
         public List<BuffData> buffDataSet = new();
-        
-        public void LoadDataFromSheet(SheetData sheetData)
+
+        public void OnDataFetched(SheetData sheetData)
         {
             Debug.Log("Load data into game".Color("yellow"));
 

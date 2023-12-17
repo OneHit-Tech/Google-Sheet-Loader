@@ -1,19 +1,20 @@
-#if UNITY_EDITOR
 using UnityEngine;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using UnityEngine.Events;
 using UnityEngine.Networking;
 using Cysharp.Threading.Tasks;
 using Debug = UnityEngine.Debug;
-using System.Collections.Generic;
 using Sirenix.OdinInspector;
 
 namespace Base.Tool.Sheet
 {
-    [CreateAssetMenu(fileName = "SheetManagerSO", menuName = "Sheet/SheetManagerSO")]
-    public class SheetDataSO : ScriptableObject
+    [CreateAssetMenu(fileName = "SheetLoader", menuName = "Sheet/SheetLoader")]
+    public class SheetLoader : ScriptableObject
     {
-        public List<SheetUrl> sheetUrls = new();
+        [Space] public SheetUrl sheetUrl;
+        [Space] public UnityEvent<SheetData> onFetchedData;
+
 
         [PropertySpace]
         [GUIColor(0f, 0.8f, 0.4f)]
@@ -21,14 +22,10 @@ namespace Base.Tool.Sheet
         private async void FetchDataFromSheet()
         {
             Debug.Log("Start fetching data ...".Color("orange"));
-            foreach (var sheetUrl in sheetUrls)
-            {
-                var sheetObjectJson = await GetDataAsync(sheetUrl.deployUrl);
-                var sheetData = JsonConvert.DeserializeObject<SheetData>(sheetObjectJson);
-                sheetUrl.onFetchedData.Invoke(sheetData);
-            }
 
-            Debug.Log("Fetch data complete!".Color("lime"));
+            var sheetObjectJson = await GetDataAsync(sheetUrl.deployUrl);
+            var sheetData = JsonConvert.DeserializeObject<SheetData>(sheetObjectJson);
+            onFetchedData.Invoke(sheetData);
         }
 
 
@@ -42,11 +39,10 @@ namespace Base.Tool.Sheet
             await webRequest.SendWebRequest();
             stopwatch.Stop();
 
-            Debug.Log($"End request after {stopwatch.Elapsed.TotalSeconds}s".Color("cyan")
+            Debug.Log($"Fetch completed in {stopwatch.Elapsed.TotalSeconds}s".Color("lime")
                       + "\n" + webRequest.downloadHandler.text);
 
             return webRequest.downloadHandler.text;
         }
     }
 }
-#endif
