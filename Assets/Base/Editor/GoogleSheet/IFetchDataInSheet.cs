@@ -1,4 +1,4 @@
-namespace Base.Tool.Sheet
+namespace Base.Editor.GoogleSheet
 {
     // TODO: implement this interface in script load data to game after fetch from sheet
     public interface IFetchDataInSheet

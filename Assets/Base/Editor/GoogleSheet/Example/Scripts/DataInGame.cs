@@ -1,6 +1,6 @@
 using System;
 
-namespace Base.Tool.Sheet.Example
+namespace Base.Editor.GoogleSheet.Example
 {
     public enum EItemType
     {

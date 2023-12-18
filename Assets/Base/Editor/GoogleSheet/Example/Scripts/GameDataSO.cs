@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Base.Tool.Sheet.Example
+namespace Base.Editor.GoogleSheet.Example
 {
     [CreateAssetMenu(fileName = "GameDataSO", menuName = "Sheet/GameDataSO")]
     public class GameDataSO : ScriptableObject, IFetchDataInSheet

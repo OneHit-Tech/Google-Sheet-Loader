@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Base.Tool.Sheet.Example
+namespace Base.Editor.GoogleSheet.Example
 {
     public class BuffUI : MonoBehaviour
     {

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Sirenix.OdinInspector;
 
-namespace Base.Tool.Sheet.Example
+namespace Base.Editor.GoogleSheet.Example
 {
     public class Panel : MonoBehaviour
     {

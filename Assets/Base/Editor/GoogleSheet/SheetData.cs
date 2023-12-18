@@ -1,8 +1,8 @@
 ﻿using System;
-using Base.Tool.Sheet.Example;
 using System.Collections.Generic;
+using Base.Editor.GoogleSheet.Example;
 
-namespace Base.Tool.Sheet
+namespace Base.Editor.GoogleSheet
 {
     [Serializable]
     public class SheetData

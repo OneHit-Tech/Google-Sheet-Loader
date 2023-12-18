@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Base.Tool.Sheet.Example
+namespace Base.Editor.GoogleSheet.Example
 {
     // * Tên trường phải trùng với tên cột trong sheet
     // * Thứ tự các trường phải trùng với thứ tự các cột trong sheet
