@@ -20,7 +20,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: b7a32fd164cf9c34c91acf3ffa4e22b9, type: 2}
         m_TargetAssemblyTypeName: Base.Tool.Sheet.Example.GameDataSO, Assembly-CSharp
-        m_MethodName: LoadDataFromSheet
+        m_MethodName: OnDataFetched
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
