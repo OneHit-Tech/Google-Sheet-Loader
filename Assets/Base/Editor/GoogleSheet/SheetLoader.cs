@@ -9,7 +9,7 @@ namespace Base.Editor.GoogleSheet
 {
     public static class SheetLoader
     {
-        [MenuItem("Base/Editor/Google Sheet/Fetch Data")]
+        [MenuItem("Base/Tool/Google Sheet/Fetch Data")]
         public static async void FetchDataFromSheet()
         {
             var sheetConfig = SheetConfig.GetInstance();

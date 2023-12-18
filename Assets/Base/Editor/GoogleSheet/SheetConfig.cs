@@ -16,7 +16,7 @@ namespace Base.Editor.GoogleSheet
         public List<SheetUrl> sheetUrls;
 
 
-        [MenuItem("Base/Editor/Google Sheet/Open Config")]
+        [MenuItem("Base/Tool/Google Sheet/Open Config")]
         public static SheetConfig GetInstance()
         {
             var instance = Resources.Load<SheetConfig>(nameof(SheetConfig));
