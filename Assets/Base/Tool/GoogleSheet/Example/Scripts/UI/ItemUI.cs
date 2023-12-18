@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Base.Editor.GoogleSheet.Example
+namespace Base.Tool.GoogleSheet.Example
 {
     public class ItemUI : MonoBehaviour
     {

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using Base.Editor.GoogleSheet.Example;
+using Base.Tool.GoogleSheet.Example;
 
-namespace Base.Editor.GoogleSheet
+namespace Base.Tool.GoogleSheet
 {
     [Serializable]
-    public class SheetData
+    public class GGSheetData
     {
         public List<ItemInSheet> Item;
         public List<BuffInSheet> Buff;

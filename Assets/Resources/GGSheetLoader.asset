@@ -9,18 +9,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fb89a03d0f0391c46b5478910cabcdc7, type: 3}
-  m_Name: SheetConfig
+  m_Script: {fileID: 11500000, guid: 392253f7b4674c3aa3fad57f72ce6ad9, type: 3}
+  m_Name: GGSheetLoader
   m_EditorClassIdentifier: 
   sheetUrls:
   - enabledFetch: 1
     originalUrl: https://docs.google.com/spreadsheets/d/1IIIjo5gRPSlIulEG8UKpblI-SoAqIkBTIZhx3srzBhw/edit#gid=0
-    deployUrl: https://script.googleusercontent.com/macros/echo?user_content_key=gMLS3Of0NIJe_9wpUZ6sFxJ4WMYnd6lhEl3ycDDYOE5YvFLK2BFi4p4ENYLftRhaBfaGvgFVVHX4dN6mrIbpRamHiyxO3laJm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnB4ZSY5UMFThaltBwob-t2efv9Z11mZXGRLhmwYTWlYw9rY35sCir2a3ExyUqWwnIMYrmb6zKZhoUPn7LeOGbtGqSoYSfFQBmNz9Jw9Md8uu&lib=MRSUt4NTG0V3STyuKSFFDImlGxTIUvSrR
+    deployUrl: https://script.googleusercontent.com/macros/echo?user_content_key=3Ps3Uj8ZWWX0GGC2SbZQR19XC7Ug8hFCeKhjhoVpMJM7ohVafZGjxgfd3pxtzqnrcLGgkC4_wqb-wMYNovSM04Qfgu0tvi0Jm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnB4ZSY5UMFThaltBwob-t2efv9Z11mZXGRLhmwYTWlYw9rY35sCir2a3ExyUqWwnIMYrmb6zKZhoUPn7LeOGbtGqSoYSfFQBmNz9Jw9Md8uu&lib=MRSUt4NTG0V3STyuKSFFDImlGxTIUvSrR
     onFetchedData:
       m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 11400000, guid: b7a32fd164cf9c34c91acf3ffa4e22b9, type: 2}
-          m_TargetAssemblyTypeName: Base.Editor.GoogleSheet.Example.GameDataSO, Assembly-CSharp-Editor
+          m_TargetAssemblyTypeName: Base.Tool.GoogleSheet.Example.GameDataSO, Assembly-CSharp
           m_MethodName: OnDataFetched
           m_Mode: 0
           m_Arguments:

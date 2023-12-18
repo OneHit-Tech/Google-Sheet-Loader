@@ -1,10 +1,10 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace Base.Editor.GoogleSheet.Example
+namespace Base.Tool.GoogleSheet.Example
 {
     [CreateAssetMenu(fileName = "GameDataSO", menuName = "Sheet/GameDataSO")]
-    public class GameDataSO : ScriptableObject, IFetchDataInSheet
+    public class GameDataSO : ScriptableObject, IFetchSheet
     {
         #region ===== Singleton =====
         private static GameDataSO _instance;
@@ -27,17 +27,17 @@ namespace Base.Editor.GoogleSheet.Example
         public List<ItemData> itemDataSet = new();
         public List<BuffData> buffDataSet = new();
 
-        public void OnDataFetched(SheetData sheetData)
+        public void OnDataFetched(GGSheetData ggSheetData)
         {
             Debug.Log("Load data into game".Color("yellow"));
 
             itemDataSet.Clear();
-            sheetData.Item.ForEach(itemInSheet =>
+            ggSheetData.Item.ForEach(itemInSheet =>
                 itemDataSet.Add(new ItemData(itemInSheet))
             );
 
             buffDataSet.Clear();
-            sheetData.Buff.ForEach(buffInSheet =>
+            ggSheetData.Buff.ForEach(buffInSheet =>
                 buffDataSet.Add(new BuffData(buffInSheet))
             );
         }
